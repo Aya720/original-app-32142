@@ -1,24 +1,19 @@
-# README
+## foldersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| name               | string     | null: false                    |
 
-Things you may want to cover:
+### Association
+- has_many :files
 
-* Ruby version
+## filesテーブル
 
-* System dependencies
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| folder           | references | foreign_key: true              |
+| title            | string     | null: false                    |
+| caption          | text       | null: false                    |
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to: folder
