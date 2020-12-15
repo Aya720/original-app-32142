@@ -1,0 +1,104 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  padding-bottom: 17vh;
+}
+
+html,　body {
+  height: 100vh;
+  background-color: #FCE3BD;
+}
+
+#wrapper {
+  width: 100%;
+  position:relative;
+  min-height: 100vh;
+}
+ 
+
+/* 商品一覧 */
+
+.item-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.item-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-lists>.list {
+  width: 40vh;
+  background-color: #FFF;
+  text-align: center;
+}
+
+
+.item-img-content {
+  position: relative;
+}
+
+.folder-name {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  color: #272727;
+}
+
+.item-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.first-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.introduction {
+  font-size: 2.5vh;
+}
+
+.item-price {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 2vh;
+  width: 2vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}
+
+/* //商品一覧 */

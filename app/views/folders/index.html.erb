@@ -1,0 +1,50 @@
+<div id="wrapper">
+<%= render "shared/header" %>
+<div class='main'>
+
+  <%# フォルダ一覧 %>
+  <%# ※cssの名前もあとで変えよう item~は不自然 %>
+  <div class='item-contents'>
+    <ul class='item-lists'>
+      <%# フォルダが作成されている場合はすべて展開 %>
+      <% @folders.each do |folder| %>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <div class='item-img-content'>
+          <%= image_tag 'test.png' , size: '280x300' %>
+          <div class='folder-name'>
+            <ul>
+              <li><%= image_tag folder.image, class: "item-img" %></li>
+              <li><%= folder.name %></li>
+            </ul>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+      <%# フォルダがない場合は作成を促す %>
+      <% if @folders.empty? %>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag 'book-19-240.png', class: "item-img" %>
+        <div class='first-info'>
+          <h3 class='introduction'>
+            Your recordsへようこそ！<br><br>
+            自分だけの記録を簡単に作成できるアプリケーションです。<br>
+            この画面では、あなたが作成したフォルダがリストに表示されます。<br><br>
+            右上のボタンをクリックすると新規フォルダが作成できます。
+          </h3>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <%# /フォルダがない場合は作成を促す %>
+</div>
+  <%# /新規フォルダ作成ページへ %>
+  <%= link_to new_folder_path, class: 'create-btn' do %>
+  <%= image_tag 'plus-circle-thin-64.png' , size: '185x50' ,class: "create-btn-icon" %>
+  <% end %>
+ 
+  </div>

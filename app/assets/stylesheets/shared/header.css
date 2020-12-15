@@ -1,0 +1,20 @@
+
+.top-page-header {
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-page-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 75px;
+  font-family: 'Caveat', cursive;
+}
+
+/* リンク先の色指定 */
+a {
+  color: blue;
+}
