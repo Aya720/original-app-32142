@@ -6,7 +6,6 @@ RSpec.describe Folder, type: :model do
   end
 
   describe 'フォルダ作成' do
-
     context 'フォルダ作成がうまくいくとき' do
       it 'name,imageが存在するとき' do
         expect(@folder).to be_valid
