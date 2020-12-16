@@ -1,9 +1,8 @@
 
 .top-page-header {
-  width: 100vw;
+  width: 50vw;
   padding: 2vh 15vw;
   display: flex;
-  flex-direction: column;
 }
 
 .top-page-contents {
@@ -16,5 +15,5 @@
 
 /* リンク先の色指定 */
 a {
-  color: blue;
+  color: #272727;
 }

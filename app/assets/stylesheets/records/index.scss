@@ -1,0 +1,102 @@
+*{
+  margin:0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  padding-bottom: 17vh;
+}
+
+html, body {
+  height: 100vh;
+}
+
+#wrapper {
+  width: 100%;
+  position:relative;
+  min-height: 100vh;
+}
+ 
+
+/* アルバム部分 */
+
+.folder-contents {
+  background-color: #efefe8;
+  padding: 4vh 0 0;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: #ddddd7 solid 2px;
+}
+
+.folder-img-content {
+  position: relative;
+  left: 12%;
+}
+
+.folder-name {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin: 0;
+  padding: 0;
+  color: #272727;
+  text-align: center;
+}
+
+.folder-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+.edit-content {
+  margin: 10vh;
+}
+
+.record-first-info {
+  text-align: center;
+  margin: 10vh 0 0;
+}
+
+.record-first-info-icon {
+  margin: 4vh 0 0;
+}
+
+/* 投稿部分 */
+
+.record-contents {
+  margin: 35px 150px;
+  padding: 0 0 0 50px;
+}
+
+.record-lists {
+  display: flex;            /* ブロックレベル要素を横並びにする。指定された要素の子要素が横並びになる */
+  flex-wrap: wrap;          /* 折り返しの指定 */
+}
+
+.record-lists>.list {
+  width: 45vh;
+  background-color: #FFF;
+}
+
+.record-title {
+  margin: 0;
+  padding: 0;
+  color: #272727;
+  text-align: center;
+}
+
+.record-item-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;         /* （画像や動画）を歪みなく表示する。だたし設定した枠外はトリミングされる */
+  border: #efefe8 solid 9px;
+}
