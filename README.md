@@ -5,15 +5,15 @@
 | name               | string     | null: false                    |
 
 ### Association
-- has_many :files
+- has_many :records
 
-## filesテーブル
+## recordsテーブル
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
 | folder           | references | foreign_key: true              |
-| title            | string     | null: false                    |
-| caption          | text       | null: false                    |
+| title            | string     |                                |
+| caption          | text       |                                |
 
 ### Association
 - belongs_to: folder
