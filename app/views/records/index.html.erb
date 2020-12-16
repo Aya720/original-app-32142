@@ -1,0 +1,75 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <%# 開いているフォルダ %>
+  <div>
+    <ul class='folder-contents'>
+      <li>
+        <div class='folder-img-content'>
+          <%= image_tag 'test.png' , size: '200x220' %>
+            <ul>
+              <div class='folder-name'>
+                <li><%= image_tag @folder.image, class: "folder-img" %></li>
+                <li><%= @folder.name %></li>
+              </div>
+            </ul>
+        </div>
+      </li>
+      <li>
+        <div class='edit-content'>
+          <%= image_tag 'pen.png' , size: '' %>
+            <ul>
+                <li><%= '編集する' %></li>
+            </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <%# /開いているフォルダ %>
+
+  <div class='record-contents'>
+    <ul class='record-lists'>
+      <% if @folder.records.present? %>
+        <%# フォルダが作成されている場合はすべて展開 %>
+        <% @records.each do |record| %>
+        <li class='list'>
+          <%= link_to do %>
+              <div class='record-title'>
+                <ul>
+                  <li><%= image_tag record.image, class: "record-item-img" %></li>
+                  <li><%= record.title %></li>
+                </ul>
+              </div>
+          <% end %>
+        </li>
+      <% end %>
+      <% end %>
+      <%# フォルダがない場合は作成を促す %>
+      <% if @folder.records.empty? %>
+        <li class='list'>
+        <%= link_to new_folder_record_path(@folder.id) do %>
+        <%= image_tag 'film.png' %>
+        <div class='record-first-info'>
+          <h3>
+            残したい写真を保存しよう<br><br>
+            自分だけの記録を簡単に作成できるアプリケーションです。<br>
+            この画面では、あなたが作成したファイルがリストに表示されます。<br>
+            下のボタンをクリックすると新規フォルダが作成できます。<br><br>
+            さっそくはじめましょう！
+          </h3>
+          <%= image_tag 'plus-circle-thin-64.png', class: "record-first-info-icon" %>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>
+
+  <%# /新規ファイル作成ページへ %>
+<% if @folder.records.present? %>
+  <%= link_to new_folder_record_path(@folder.id), class: 'create-btn' do %>
+  <%= image_tag 'plus-circle-thin-64.png' , size: '185x50' ,class: "create-btn-icon" %>
+  <% end %>
+<% end %>

@@ -9,7 +9,7 @@
       <%# フォルダが作成されている場合はすべて展開 %>
       <% @folders.each do |folder| %>
       <li class='list'>
-        <%= link_to "#" do %>
+        <%= link_to folder_records_path(folder.id), method: :get do %>
         <div class='item-img-content'>
           <%= image_tag 'test.png' , size: '280x300' %>
           <div class='folder-name'>

@@ -1,0 +1,41 @@
+<div class="items-sell-contents">
+  <div class="items-sell-header">
+    <%= link_to 'Your records', "/" %>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+    </style>
+  </div>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">ファイルを作成</h2>
+    <%= form_with model: @record, url: folder_records_path, local: true do |f| %>
+    
+    <%# 見出し画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        <%= image_tag 'photo.png', class: "item-img" %>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /見出し画像 %>
+    <%# c %>
+    <div class="record-title">
+      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"Title" %>
+    </div>
+    <div class="record-title">
+      <%= f.text_area :caption, class:"items-text", id:"item-name", placeholder:"Caption", size: "300x10" %>
+    </div>
+    <%# /フォルダ名 %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "保存する" ,class:"sell-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+</div>
