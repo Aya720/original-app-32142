@@ -1,6 +1,7 @@
 class RecordsController < ApplicationController
+  before_action :get_id, only: [:index, :create]
+
   def index
-    @folder = Folder.find(params[:folder_id])
     @records = Record.includes(:folder)
   end
 
@@ -9,16 +10,18 @@ class RecordsController < ApplicationController
   end
 
   def create
-    @folder = Folder.find(params[:folder_id])
     @record = Record.new(record_params)
     if @record.save
-      render :index
+      redirect_to folder_records_path(@folder.id)
     else
       render :new
     end
   end
 
   private
+  def get_id
+  @folder = Folder.find(params[:folder_id])
+  end
 
   def record_params
     params.require(:record).permit(:title, :caption, :image).merge(folder_id: params[:folder_id])
