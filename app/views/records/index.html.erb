@@ -43,10 +43,10 @@
       <% end %>
       <%# フォルダがない場合は作成を促す %>
       <% if @folder.records.empty? %>
-        <li class='list'>
+        <li>
+        <div class='record-first-info'>
         <%= link_to new_folder_record_path(@folder.id) do %>
         <%= image_tag 'film.png' %>
-        <div class='record-first-info'>
           <h3>
             残したい写真を保存しよう<br><br>
             自分だけの記録を簡単に作成できるアプリケーションです。<br>
