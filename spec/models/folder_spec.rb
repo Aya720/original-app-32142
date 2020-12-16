@@ -20,14 +20,14 @@ RSpec.describe Folder, type: :model do
       end
       it 'nameが空だと登録ができない' do
         @folder.name = ''
-        @folder.valid?￥
+        @folder.valid? ￥
         expect(@folder.errors.full_messages).to include("Item can't be blank")
       end
       it 'nameが10字以上だと登録ができない' do
         @folder.name = 'あああああああああああ'
         @folder.valid?
         binding.pry
-        expect(@folder.errors.full_messages).to include("Name is too long (maximum is 10 characters)")
+        expect(@folder.errors.full_messages).to include('Name is too long (maximum is 10 characters)')
       end
     end
   end

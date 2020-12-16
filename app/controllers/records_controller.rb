@@ -19,6 +19,7 @@ class RecordsController < ApplicationController
   end
 
   private
+
   def record_params
     params.require(:record).permit(:title, :caption, :image).merge(folder_id: params[:folder_id])
   end
