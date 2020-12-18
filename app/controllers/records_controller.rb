@@ -4,7 +4,6 @@ class RecordsController < ApplicationController
 
   def index
     @records = @folder.records
-    @record = Record.find(params[:folder_id])
   end
 
   def new
