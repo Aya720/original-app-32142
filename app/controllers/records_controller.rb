@@ -1,10 +1,9 @@
 class RecordsController < ApplicationController
-  before_action :get_folder_id, only: [:index, :show, :new, :create, :edit, :update]
+  before_action :get_folder_id, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   before_action :get_record_id, only: [:show, :edit, :update]
 
   def index
     @records = @folder.records
-    @record = Record.find(params[:folder_id])
   end
 
   def new
@@ -33,6 +32,12 @@ class RecordsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    record = Record.find(params[:id])
+    record.destroy
+    redirect_to folder_records_path(@folder.id)
   end
 
 
