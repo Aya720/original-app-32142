@@ -1,0 +1,26 @@
+<%= render "shared/header" %>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Lato&family=Quicksand:wght@500&display=swap');
+</style>
+<div class="item-show">
+  <div class="item-box">
+    <div class='item-img-content'>
+      <%= image_tag @record.image ,class:"item-box-img" %>
+    </div>
+
+    <div class="item-explain-box">
+      <ul>
+        <li class="item-explain-title"><%= "T I T L E" %></li>
+        <li class="item-title"><%= @record.title %></li>
+      </ul>
+      <ul>
+        <li class="item-explain-caption"><%= "C A P T I O N" %></li>
+        <li class="item-caption"><%= @record.caption %></li>
+      </ul>
+     </div>
+
+    <%#<%= link_to '商品の編集', "#", method: :get, class: "item-red-btn" %>
+    <%#<%= link_to '削除', "#", method: :delete, class:'item-destroy' %>
+
+  </div>
+</div>
