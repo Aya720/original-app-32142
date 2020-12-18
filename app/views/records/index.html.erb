@@ -27,11 +27,12 @@
   </div>
   <%# /開いているフォルダ %>
 
+  <%# フォルダに保存したファイルの一覧 %>
   <div class='record-contents'>
     <ul class='record-lists'>
       <% @records.each do |record| %>
       <li class='list'>
-        <%= link_to do %>
+        <%= link_to folder_record_path(@folder.id, record.id), method: :get do %>
           <div class='record-title'>
             <ul>
               <li><%= image_tag record.image, class: "record-item-img" %></li>
@@ -41,7 +42,7 @@
         <% end %>
       </li>
       <% end %>
-      <%# フォルダがない場合は作成を促す %>
+      <%# フォルダがない場合は表示 %>
       <% if @folder.records.empty? %>
         <li>
         <div class='record-first-info'>
@@ -49,8 +50,7 @@
         <%= image_tag 'film.png' %>
           <h3>
             残したい写真を保存しよう<br><br>
-            自分だけの記録を簡単に作成できるアプリケーションです。<br>
-            この画面では、あなたが作成したファイルがリストに表示されます。<br>
+            この画面では、あなたが保存したファイルが<br>リストに表示されます。<br>
             下のボタンをクリックすると新規フォルダが作成できます。<br><br>
             さっそくはじめましょう！
           </h3>
@@ -64,8 +64,8 @@
 
 </div>
 
-  <%# /新規ファイル作成ページへ %>
 <% if @folder.records.present? %>
+  <%# /新規ファイル作成ページへ = recordsコントローラーのnew %>
   <%= link_to new_folder_record_path(@folder.id), class: 'create-btn' do %>
   <%= image_tag 'plus-circle-thin-64.png' , size: '185x50' ,class: "create-btn-icon" %>
   <% end %>

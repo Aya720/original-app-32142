@@ -9,6 +9,7 @@
       <%# フォルダが作成されている場合はすべて展開 %>
       <% @folders.each do |folder| %>
       <li class='list'>
+        <%# 作成したフォルダに飛んでいる = recordsコントローラのindex %>
         <%= link_to folder_records_path(folder.id), method: :get do %>
         <div class='item-img-content'>
           <%= image_tag 'test.png' , size: '280x300' %>
@@ -32,7 +33,8 @@
             Your recordsへようこそ！<br><br>
             自分だけの記録を簡単に作成できるアプリケーションです。<br>
             この画面では、あなたが作成したフォルダがリストに表示されます。<br><br>
-            右上のボタンをクリックすると新規フォルダが作成できます。
+            右上のボタンをクリックすると新規フォルダが作成できます。<br>
+            さっそくはじめましょう！
           </h3>
         </div>
         <% end %>
