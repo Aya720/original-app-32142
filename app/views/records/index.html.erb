@@ -32,7 +32,7 @@
     <ul class='record-lists'>
       <% @records.each do |record| %>
       <li class='list'>
-        <%= link_to folder_record_path(@folder.id, record.id), method: :get do %>
+        <%= link_to folder_record_path(@folder.id, @record.id), method: :get do %>
           <div class='record-title'>
             <ul>
               <li><%= image_tag record.image, class: "record-item-img" %></li>
