@@ -17,10 +17,13 @@
       </li>
       <li>
         <div class='edit-content'>
+          <%= link_to edit_folder_path(@folder.id), method: :get do %>
           <%= image_tag 'pen.png' , size: '' %>
             <ul>
+                                          <%# foldersコントローラのeditに飛ぶ %>
                 <li><%= '編集する' %></li>
             </ul>
+          <% end %>
         </div>
       </li>
     </ul>
