@@ -32,6 +32,8 @@
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
       <%= f.submit "変更する" ,class:"sell-btn" %>
+                                        <%# foldersコントローラのdestroyにアクションに飛ぶ %>
+      <%= link_to 'このアルバムを削除する', folder_path(@folder.id), method: :delete, class:'sell-btn' %>
     </div>
     <%# /下部ボタン %>
   </div>

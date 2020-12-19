@@ -29,6 +29,12 @@ class FoldersController < ApplicationController
     end
   end
 
+  def destroy
+    folder = Folder.find(params[:id])
+    folder.destroy
+    redirect_to root_path
+  end
+
   private
 
   def folder_params
