@@ -3,5 +3,5 @@ class Folder < ApplicationRecord
   validates :name, length: { maximum: 10 }
 
   has_one_attached :image
-  has_many :records
+  has_many :records, dependent: :destroy
 end
