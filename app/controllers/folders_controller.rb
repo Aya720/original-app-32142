@@ -16,6 +16,19 @@ class FoldersController < ApplicationController
     end
   end
 
+  def edit
+    @folder = Folder.find(params[:id])
+  end
+
+  def update
+    @folder = Folder.find(params[:id])
+    if @folder.update(folder_params)
+      redirect_to folder_records_path(@folder.id)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def folder_params
