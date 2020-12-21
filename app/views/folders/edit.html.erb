@@ -1,42 +1,24 @@
-
-<div class="items-sell-contents">
-  <header class="items-sell-header">
-    <%# <%= link_to image_tag, "/" %>
-  </header>
-  <div class="items-sell-main">
-    <h2 class="items-sell-title">フォルダを編集</h2>
+<%= render "shared/header" %>
+<div class="back-image">
+  <div class="create-main">
+    <h2 class="f-create">フォルダを編集</h2>
                                               <%# foldersコントローラのupdateに飛ぶ %>
-    <%= form_with model: @folder, url: folder_path(@folder.id), local: true do |f| %>
+      <%= form_with model: @folder, url: folder_path(@folder.id), local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
+          <div class="img-upload">
+            <div class="bold-text">画像</div>
+            <%= f.file_field :image, id:"item-image" %>
+          </div>
+          <div class="create-title">
+            <div class="bold-text">フォルダ名</div>
+            <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"Title" %>
+          </div>
 
-    <%# render 'shared/error_messages', model: f.object %>
-
-    <%# 出品画像 %>
-    <div class="img-upload">
-      <div class="weight-bold-text">
-        <%= image_tag 'photo.png', class: "item-img" %>
-      </div>
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"item-image" %>
-      </div>
-    </div>
-    <%# /出品画像 %>
-    <%# 商品名と商品説明 %>
-    <div class="record-title">
-      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"Title" %>
-    </div>
-    <%# /商品名と商品説明 %>
-
-    <%# 下部ボタン %>
-    <div class="sell-btn-contents">
-      <%= f.submit "変更する" ,class:"sell-btn" %>
+          <%= f.submit "変更する" ,class:"save-btn" %>
+          <div class="d-contents">
+            <%= link_to 'このフォルダを削除する', folder_path(@folder.id), method: :delete %>
+          </div>
+      <% end %>
                                         <%# foldersコントローラのdestroyにアクションに飛ぶ %>
-      <%= link_to 'このアルバムを削除する', folder_path(@folder.id), method: :delete, class:'sell-btn' %>
-    </div>
-    <%# /下部ボタン %>
   </div>
-  <% end %>
-
 </div>

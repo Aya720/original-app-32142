@@ -7,29 +7,21 @@ a {
   text-decoration: none;
 }
 
-.main {
-  padding-bottom: 17vh;
-}
-
-html, body {
-  height: 100vh;
-}
-
 #wrapper {
   width: 100%;
   position:relative;
-  min-height: 100vh;
 }
- 
-
-/* アルバム部分 */
 
 .folder-contents {
-  background-color: #efefe8;
-  padding: 4vh 0 0;
+  width: 100vw;
+  background-color: #F9F4EE;
+  color: #2B2D2D;
+  padding: 2vh 0;
   display: flex;
   justify-content: space-around;
-  border-bottom: #ddddd7 solid 2px;
+  border-top: #2B2D2D solid 1px;
+  border-bottom: #2B2D2D solid 1px;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 .folder-img-content {
@@ -37,7 +29,7 @@ html, body {
   left: 12%;
 }
 
-.folder-name {
+.record-folder-name {
   position: absolute;
   top: 57%;
   left: 50%;
@@ -53,50 +45,67 @@ html, body {
 .folder-img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 9%;
   object-fit: cover; 
 }
 
 .edit-content {
-  margin: 10vh;
+  margin: 7vh;
 }
 
 .record-first-info {
+  font-size: 2.3vh;
+  color: #2B2D2D;
   text-align: center;
-  margin: 10px 300px;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  margin: 1vh 14vw 0;
 }
 
 .record-first-info-icon {
-  margin: 4vh 0 0;
+  margin: 4vh 0;
 }
 
-/* 投稿部分 */
+.info-text {
+  width: 45vw;
+  margin: 4vh 0;
+}
 
 .record-contents {
-  margin: 35px 150px;
-  padding: 0 0 0 50px;
+  width: 100vw;
+  background-color: #F9F4EE;
+  background-image:
+    linear-gradient(#ccc 1px, transparent 1px),
+    linear-gradient(90deg, #ccc 1px, transparent 1px),
+    linear-gradient(#ccc 1px, transparent 1px),
+    linear-gradient(90deg, #ccc 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 25px 25px, 25px 25px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+  border:#ccc 1px solid;
 }
 
 .record-lists {
   display: flex;            /* ブロックレベル要素を横並びにする。指定された要素の子要素が横並びになる */
   flex-wrap: wrap;          /* 折り返しの指定 */
+  padding: 3vh 15vw 7vh;
 }
 
 .record-lists>.list {
-  width: 45vh;
-  background-color: #FFF;
+  width: 19vw;
+  background-color: #F9F4EE;
+  margin: 3vh 1vw;
+  padding: 2vh;
+}
+
+.record-c {
+  text-align: center;
 }
 
 .record-title {
   margin: 0;
   padding: 0;
   color: #272727;
-  text-align: center;
 }
 
 .record-item-img {
-  width: 250px;
-  height: 250px;
   object-fit: cover;         /* （画像や動画）を歪みなく表示する。だたし設定した枠外はトリミングされる */
-  border: #efefe8 solid 9px;
 }

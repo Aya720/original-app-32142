@@ -1,8 +1,14 @@
 .footer {
-  width: 100vw;
-  height: 17vh;
-  color: #FFF;
-  background-color: #272727;
-  position: absolute;
-  bottom: 0;
+  height: 10vh;
+  background-color: #F9F4EE;
+  background-image:
+    linear-gradient(#ccc 1px, transparent 1px),
+    linear-gradient(90deg, #ccc 1px, transparent 1px),
+    linear-gradient(#ccc 1px, transparent 1px),
+    linear-gradient(90deg, #ccc 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 25px 25px, 25px 25px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+  border:#ccc 1px solid;
+  padding: 0 3vw;
 }
+

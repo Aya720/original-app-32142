@@ -7,12 +7,9 @@ a {
   text-decoration: none;
 }
 
-.main {
-  padding-bottom: 17vh;
-}
-
 html, body {
   height: 100vh;
+  background-color: #F9F4EE;
 }
 
 #wrapper {
@@ -20,84 +17,98 @@ html, body {
   position:relative;
   min-height: 100vh;
 }
- 
 
-/* 商品一覧 */
-
-.item-contents {
-  background-color: #FFF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10vh 0;
+.main {
+  padding-bottom: 10vh;
+  background-color: #F9F4EE;
 }
 
-.item-lists {
+.folders {
   width: 100vw;
+  background-color: #F9F4EE;
+}
+
+.folder-lists {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #F9F4EE;
+  padding: 3vh 17vw 0;
 }
 
-.item-lists>.list {
-  width: 40vh;
-  background-color: #FFF;
+.book-lists {
+  margin-top: 10px;
+}
+
+.folder-lists>.lists {
+  width: 30vh;
   text-align: center;
+  padding: 5vh 0 0;
+  margin: 0 0 22vh;
 }
 
+.folder-lists>.first {
+  background-color: #F9F4EE;
+  text-align: center;
+  padding: 3vh 0;
+}
 
-.item-img-content {
+.folder-img {
   position: relative;
+}
+
+.record-title-text {
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #2B2D2D;
 }
 
 .folder-name {
   position: absolute;
-  top: 55%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
+  top: 177%;
+  left: 140%;
   transform: translate(-50%,-50%);
   margin: 0;
   padding: 0;
   color: #272727;
 }
 
-.item-img {
+.name {
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  padding: 10px 0;
+  font-size: 17px;
+  color: #000000;
+}
+
+.create_folder-img {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 9%;
   object-fit: cover;
 }
 
+
 .first-info {
-  background-color: #FFF;
-  color: black;
+  background-color: #F9F4EE;
+  color: #000000;
   padding: 1vw;
 }
 
 .introduction {
-  font-size: 2.5vh;
+  font-size: 2.3vh;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
-.item-price {
-  font-size: 1.5vh;
-  display: flex;
-  justify-content: space-between;
+.first-info-icon {
+  margin: 4vh 0 0;
 }
 
-
-.star-btn {
-  display: flex;
-  align-items: center;
+.create-btn {
+  top: 45px;
+  right: 200px;
+  position: fixed;
 }
 
-.star-icon {
-  height: 2vh;
-  width: 2vh;
-  margin-right: 0.5vw;
+.create-btn-icon {
+  width: 70px;
+  height: 70px;
 }
-
-.star-count {
-  font-size: 2vh;
-}
-

@@ -1,75 +1,71 @@
+<div id="wrapper">
 <%= render "shared/header" %>
-<div class='main'>
-
-  <%# 開いているフォルダ %>
-  <div>
-    <ul class='folder-contents'>
-      <li>
-        <div class='folder-img-content'>
-          <%= image_tag 'test.png' , size: '200x220' %>
-            <ul>
-              <div class='folder-name'>
-                <li><%= image_tag @folder.image, class: "folder-img" %></li>
-                <li><%= @folder.name %></li>
-              </div>
-            </ul>
-        </div>
-      </li>
-      <li>
-        <div class='edit-content'>
-          <%= link_to edit_folder_path(@folder.id), method: :get do %>
-          <%= image_tag 'pen.png' , size: '' %>
-            <ul>
-                                          <%# foldersコントローラのeditに飛ぶ %>
-                <li><%= '編集する' %></li>
-            </ul>
-          <% end %>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <%# /開いているフォルダ %>
-
-  <%# フォルダに保存したファイルの一覧 %>
-  <div class='record-contents'>
-    <ul class='record-lists'>
-      <% @records.each do |record| %>
-      <li class='list'>
-        <%= link_to folder_record_path(@folder.id, record.id), method: :get do %>
-          <div class='record-title'>
-            <ul>
-              <li><%= image_tag record.image, class: "record-item-img" %></li>
-              <li><%= record.title %></li>
-            </ul>
-          </div>
-        <% end %>
-      </li>
-      <% end %>
-      <%# フォルダがない場合は表示 %>
-      <% if @folder.records.empty? %>
+    <%# 開いているフォルダ %>
+    <div>
+      <ul class='folder-contents'>
         <li>
-        <div class='record-first-info'>
-        <%= link_to new_folder_record_path(@folder.id) do %>
-        <%= image_tag 'film.png' %>
-          <h3>
-            残したい写真を保存しよう<br><br>
-            この画面では、あなたが保存したファイルが<br>リストに表示されます。<br>
-            下のボタンをクリックすると新規フォルダが作成できます。<br><br>
-            さっそくはじめましょう！
-          </h3>
-          <%= image_tag 'plus-circle-thin-64.png', class: "record-first-info-icon" %>
-        </div>
+          <div class='folder-img-content'>
+            <%= image_tag 'book7.png' , size: '200x220' %>
+              <ul>
+                <div class='record-folder-name'>
+                  <li><%= image_tag @folder.image, class: "folder-img" %></li>
+                  <li><%= @folder.name %></li>
+                </div>
+              </ul>
+          </div>
+        </li>
+        <li>
+          <div class='edit-content'>
+            <%= link_to edit_folder_path(@folder.id), method: :get do %>
+            <%= image_tag 'pen2.png' , size: '70x70' %>
+              <ul>
+                  <li><%= '編集する' %></li>
+              </ul>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <%# フォルダに保存したファイルの一覧 %>
+    <div class='record-contents'>
+      <ul class='record-lists'>
+        <% @records.each do |record| %>
+        <li class='list'>
+          <%= link_to folder_record_path(@folder.id, record.id), method: :get do %>
+            <div class='record-title'>
+              <ul class='record-c'>
+                <li><%= image_tag record.image, class: "record-item-img" ,size: '300x300' %></li>
+                <li class='record-title-text'><%= record.title %></li>
+              </ul>
+            </div>
+          <% end %>
+        </li>
         <% end %>
-      </li>
-      <% end %>
-    </ul>
-  </div>
+        <%# フォルダがない場合は表示 %>
+        <% if @folder.records.empty? %>
+          <li class='record-first'>
+            <div class='record-first-info'>
+              <%= image_tag 'film3.png' , size: '250x250'%>
+                <div class='info-text'>
+                  残したい写真を保存しよう<br><br>
+                  この画面では、あなたが保存したファイルがリストに表示されます。<br>
+                  下のボタンをクリックすると新規フォルダが作成できます。<br><br>
+                  さっそくはじめましょう！
+                </div>
+                  <%= link_to new_folder_record_path(@folder.id) do %>
+                    <%= image_tag 'plus-circle-thin-64.png', class: "record-first-info-icon" %>
+                  <% end %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
 
-</div>
-
-<% if @folder.records.present? %>
-  <%# /新規ファイル作成ページへ = recordsコントローラーのnew %>
-  <%= link_to new_folder_record_path(@folder.id), class: 'create-btn' do %>
-  <%= image_tag 'plus-circle-thin-64.png' , size: '185x50' ,class: "create-btn-icon" %>
+  <% if @folder.records.present? %>
+    <%# /新規ファイル作成ページへ = recordsコントローラーのnew %>
+    <%= link_to new_folder_record_path(@folder.id), class: 'create-btn' do %>
+    <%= image_tag 'plus-circle-thin-64.png' , size: '185x50' ,class: "create-btn-icon" %>
+    <% end %>
   <% end %>
-<% end %>
+</div>

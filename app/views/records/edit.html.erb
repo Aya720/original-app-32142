@@ -1,44 +1,24 @@
-<%# cssは商品出品のものを併用しています。
-app/assets/stylesheets/items/new.css %>
+<%= render "shared/header" %>
+<div class="back-image">
+  <div class="create-main">
+    <h2 class="f-create">ファイルを編集</h2>
+      <%= form_with model: [@folder, @record], url: folder_record_path(@folder.id, @record.id), local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
+          <div class="img-upload">
+            <div class="bold-text">画像</div>
+            <%= f.file_field :image, id:"item-image" %>
+          </div>
+          <div class="file-create-title">
+            <div class="bold-text">タイトル</div>
+            <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"Title" %>
+          </div>
+          <div class="file-create-caption">
+            <div class="bold-text">キャプション</div>
+            <%= f.text_area :caption, class:"items-text", id:"item-name", placeholder:"Caption", size: "300x10" %>
+          </div>
 
-<div class="items-sell-contents">
-  <header class="items-sell-header">
-    <%# <%= link_to image_tag, "/" %>
-  </header>
-  <div class="items-sell-main">
-    <h2 class="items-sell-title">ファイルを編集</h2>
-    <%= form_with model: [@folder, @record], url: folder_record_path(@folder.id, @record.id), local: true do |f| %>
-
-    <%# render 'shared/error_messages', model: f.object %>
-
-    <%# 出品画像 %>
-    <div class="img-upload">
-      <div class="weight-bold-text">
-        <%= image_tag 'photo.png', class: "item-img" %>
-      </div>
-      <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"item-image" %>
-      </div>
-    </div>
-    <%# /出品画像 %>
-    <%# 商品名と商品説明 %>
-    <div class="record-title">
-      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"Title" %>
-    </div>
-    <div class="record-title">
-      <%= f.text_area :caption, class:"items-text", id:"item-name", placeholder:"Caption", size: "300x10" %>
-    </div>
-    <%# /商品名と商品説明 %>
-
-    <%# 下部ボタン %>
-    <div class="sell-btn-contents">
-      <%= f.submit "変更する" ,class:"sell-btn" %>
-    </div>
-    <%# /下部ボタン %>
+          <%# 下部ボタン %>
+          <div class="save-btn-contents"><%= f.submit "保存する" ,class:"save-btn" %></div>
+      <% end %>
   </div>
-  <% end %>
-
 </div>

@@ -1,19 +1,26 @@
 
 .top-page-header {
-  width: 50vw;
-  padding: 2vh 15vw;
-  display: flex;
+  width: 92vw;
+  padding: 4vh 4vw;
+  background-color: #F9F4EE;
 }
 
 .top-page-contents {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 75px;
   font-family: 'Caveat', cursive;
+  background-color: #F9F4EE;
+  background-image:
+    linear-gradient(#ccc 1px, transparent 1px),
+    linear-gradient(90deg, #ccc 1px, transparent 1px),
+    linear-gradient(#ccc 1px, transparent 1px),
+    linear-gradient(90deg, #ccc 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+  border:#ccc 1px solid;
+  padding: 0 3vw;
 }
 
 /* リンク先の色指定 */
 a {
-  color: #272727;
+  color: #000000;
 }

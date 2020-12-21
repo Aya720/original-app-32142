@@ -19,7 +19,7 @@
       </ul>
      </div>
 
-    <%= link_to '編集する', edit_folder_record_path(@folder.id, @record.id), method: :get, class: "item-red-btn" %>
-    <%= link_to '削除', folder_record_path(@folder.id, @record.id), method: :delete, class:'item-destroy' %>
+    <%= link_to '編集する', edit_folder_record_path(@folder.id, @record.id), method: :get, class: "item-edit" %>
+    <%= link_to 'このファイルを削除する', folder_record_path(@folder.id, @record.id), method: :delete, class:'item-destroy' %>
   </div>
 </div>
