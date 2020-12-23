@@ -33,7 +33,7 @@ html, body {
   flex-wrap: wrap;
   justify-content: center;
   background-color: #F9F4EE;
-  padding: 3vh 17vw 0;
+  padding: 3vh 20vw 0 12vw;
 }
 
 .book-lists {
@@ -41,10 +41,10 @@ html, body {
 }
 
 .folder-lists>.lists {
-  width: 30vh;
+  width: 20vh;
   text-align: center;
-  padding: 5vh 0 0;
-  margin: 0 0 22vh;
+  padding: 5vh 1vw 0;
+  margin: 0 0 25vh;
 }
 
 .folder-lists>.first {
@@ -60,12 +60,13 @@ html, body {
 .record-title-text {
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   color: #2B2D2D;
+  font-size: 27px;
 }
 
 .folder-name {
   position: absolute;
-  top: 177%;
-  left: 140%;
+  top: 247%;
+  left: 145%;
   transform: translate(-50%,-50%);
   margin: 0;
   padding: 0;
@@ -75,13 +76,13 @@ html, body {
 .name {
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   padding: 10px 0;
-  font-size: 17px;
+  font-size: 24px;
   color: #000000;
 }
 
 .create_folder-img {
-  width: 150px;
-  height: 150px;
+  width: 230px;
+  height: 230px;
   border-radius: 9%;
   object-fit: cover;
 }
@@ -103,12 +104,12 @@ html, body {
 }
 
 .create-btn {
-  top: 45px;
-  right: 200px;
+  top: 88px;
+  right: 163px;
   position: fixed;
 }
 
 .create-btn-icon {
-  width: 70px;
-  height: 70px;
+  width: 120px;
+  height: 120px;
 }
