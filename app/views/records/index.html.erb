@@ -5,7 +5,7 @@
       <ul class='folder-contents'>
         <li>
           <div class='folder-img-content'>
-            <%= image_tag 'book7.png' , size: '270x290' %>
+            <%= image_tag 'book7.png' , size: '200x220' %>
               <ul>
                 <div class='record-folder-name'>
                   <li><%= image_tag @folder.image, class: "folder-img" %></li>
@@ -17,9 +17,9 @@
         <li>
           <div class='edit-content'>
             <%= link_to edit_folder_path(@folder.id), method: :get do %>
-            <%= image_tag 'pen2.png' , size: '100x100' %>
+            <%= image_tag 'pen2.png' , size: '70x70' %>
               <ul>
-                  <li class='edit-pencil'><%= '編集する' %></li>
+                  <li ><%= '編集する' %></li>
               </ul>
             <% end %>
           </div>
@@ -35,7 +35,7 @@
           <%= link_to folder_record_path(@folder.id, record.id), method: :get do %>
             <div class='record-title'>
               <ul class='record-c'>
-                <li><%= image_tag record.image, class: "record-item-img" ,size: '450x450' %></li>
+                <li><%= image_tag record.image, class: "record-item-img" ,size: '300x300' %></li>
                 <li class='record-title-text'><%= record.title %></li>
               </ul>
             </div>

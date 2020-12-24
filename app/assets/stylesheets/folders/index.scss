@@ -33,7 +33,7 @@ html, body {
   flex-wrap: wrap;
   justify-content: center;
   background-color: #F9F4EE;
-  padding: 3vh 20vw 0 12vw;
+  padding: 3vh 17vw 0;
 }
 
 .book-lists {
@@ -41,10 +41,10 @@ html, body {
 }
 
 .folder-lists>.lists {
-  width: 20vh;
+  width: 30vh;
   text-align: center;
-  padding: 5vh 1vw 0;
-  margin: 0 0 25vh;
+  padding: 5vh 0 0;
+  margin: 0 0 22vh;
 }
 
 .folder-lists>.first {
@@ -65,8 +65,8 @@ html, body {
 
 .folder-name {
   position: absolute;
-  top: 247%;
-  left: 145%;
+  top: 177%;
+  left: 140%;
   transform: translate(-50%,-50%);
   margin: 0;
   padding: 0;
@@ -76,13 +76,13 @@ html, body {
 .name {
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   padding: 10px 0;
-  font-size: 24px;
+  font-size: 17px;
   color: #000000;
 }
 
 .create_folder-img {
-  width: 230px;
-  height: 230px;
+  width: 150px;
+  height: 150px;
   border-radius: 9%;
   object-fit: cover;
 }
@@ -104,12 +104,12 @@ html, body {
 }
 
 .create-btn {
-  top: 88px;
-  right: 163px;
+  top: 45px;
+  right: 200px;
   position: fixed;
 }
 
 .create-btn-icon {
-  width: 120px;
-  height: 120px;
+  width: 70px;
+  height: 70px;
 }
