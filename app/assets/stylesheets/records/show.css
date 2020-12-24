@@ -63,6 +63,8 @@
 
 .item-explain-title,
 .item-explain-caption {
+  width: 251px;
+  margin: 0 auto;
   font-size: 20px;
   color: #2B2D2D;
   border-bottom: #000000 1px solid;
@@ -77,5 +79,6 @@
 .item-caption {
   padding: 3vh 2vw;
   font-size: 20px;
+  width: 41vw;
 }
 
