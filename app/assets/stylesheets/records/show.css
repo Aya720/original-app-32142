@@ -20,8 +20,8 @@
 
 .item-box-img {
   display: block;
-  height: 600px;
-  width: 600px;
+  height: 400px;
+  width: 400px;
   object-fit: cover;
 }
 
@@ -30,10 +30,10 @@
   background: #eee;
   border: 3px solid #eee;
   color: #000000;
-  width: 29vw;
-  height: 3vh;
+  width: 495px;
+  height: 30px;
   margin: 6vh 0 0 0;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 20px;
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   padding: 10px;
@@ -44,39 +44,38 @@
   background: lightgray;
   border: 3px solid lightgray;
   color: #000000;
-  width: 29vw;
-  height: 3vh;
+  width: 495px;
+  height: 30px;
   margin: 3vh 0 0 0;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 20px;
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   padding: 10px;
 }
 
 .item-explain-box {
-  margin: 80px 0 45px;
+  margin: 40px 0;
   text-align: center;
   font-family: 'Caveat', cursive;
   font-family: 'Lato', sans-serif;
   font-family: 'Quicksand', sans-serif;
-  padding: 0 9vw;
 }
 
 .item-explain-title,
 .item-explain-caption {
-  font-size: 30px;
+  font-size: 20px;
   color: #2B2D2D;
   border-bottom: #000000 1px solid;
 }
 
 .item-title {
   padding: 3vh 2vw;
-  font-size: 30px;
+  font-size: x-large;
   font-weight: 500;
 }
 
 .item-caption {
   padding: 3vh 2vw;
-  font-size: 27px;
+  font-size: 20px;
 }
 

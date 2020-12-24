@@ -109,7 +109,7 @@ input,
 textarea,
 select {
   font-family:inherit;
-  font-size:25px;
+  font-size:inherit;
   font-weight:inherit;
 }
 /*to enable resizing for IE*/
